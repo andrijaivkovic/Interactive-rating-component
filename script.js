@@ -5,17 +5,25 @@ const optionsContainer = document.querySelector(".options__container");
 const userSelection = document.querySelector(".user__selection");
 const submitButton = document.querySelector(".button__submit");
 
-optionsContainer.addEventListener("click", function (e) {
-  const option = e.target.closest(".option");
+const init = function () {
+  let optionValue;
 
-  if (!option) return;
+  optionsContainer.addEventListener("click", function (e) {
+    const option = e.target.closest(".option");
 
-  const optionValue = option.dataset.option;
+    if (!option) return;
 
-  userSelection.textContent = optionValue;
-});
+    optionValue = option.dataset.option;
 
-submitButton.addEventListener("click", function () {
-  thanksCard.classList.toggle("hidden");
-  ratingCard.classList.toggle("hidden");
-});
+    userSelection.textContent = optionValue;
+  });
+
+  submitButton.addEventListener("click", function () {
+    if (!optionValue) return;
+
+    thanksCard.classList.toggle("hidden");
+    ratingCard.classList.toggle("hidden");
+  });
+};
+
+init();
