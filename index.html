@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer type="module" src="./script.js"></script>
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <section class="rating__card card">
+      <div class="rating__card--header">
+        <div class="card__header--icon">
+          <img class="header__icon" src="./images/icon-star.svg" alt="" />
+        </div>
+      </div>
+      <div class="rating__card--text card__text">
+        <div class="card__text--title">
+          <h2>How did we do?</h2>
+        </div>
+        <div class="card__text--body">
+          <p>
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+        </div>
+      </div>
+      <div class="rating__card--options options__container">
+        <button data-option="1" class="card__options--option option">1</button>
+        <button data-option="2" class="card__options--option option">2</button>
+        <button data-option="3" class="card__options--option option">3</button>
+        <button data-option="4" class="card__options--option option">4</button>
+        <button data-option="5" class="card__options--option option">5</button>
+      </div>
+      <div class="rating__card--submit">
+        <button class="card__submit--button button__submit">Submit</button>
+      </div>
+    </section>
+    <section class="thanks__card card hidden">
+      <div class="thanks__card--image">
+        <div class="card__image--image">
+          <img src="./images/illustration-thank-you.svg" alt="" />
+        </div>
+      </div>
+      <div class="thanks__card--selection">
+        <div class="card__selection--container">
+          <p class="selection__container--text">
+            You selected <span class="user__selection">1</span> out of 5
+          </p>
+        </div>
+      </div>
+      <div class="thanks__card--text card__text">
+        <div class="card__text--title"><h2>Thank you!</h2></div>
+        <div class="card__text--body">
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don't hesitate to get in touch!
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
